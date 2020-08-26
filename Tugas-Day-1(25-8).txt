@@ -1,0 +1,18 @@
+1. Apa itu backend? (scope, career path)
+    API=application programming interface
+
+    Service API = perantara untuk multi sistem ( android, web, ios)
+    pakai JSON (lbh dinamis)
+
+    dev ops= server
+    backend = api( service)
+
+2. Install node js, git
+
+    git bash = terminal yg disediakan oleh git, bisa digunakan untuk menggunakan terminal versi linux.
+
+3. Terminal / version control
+    cd = change directory
+
+Extra materi:
+    basic html(script external), emmet vscode 

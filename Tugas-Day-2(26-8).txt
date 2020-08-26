@@ -1,0 +1,22 @@
+Tutorial Git :
+    git init => initiate git
+    git remote add origin (link git clone https/ssh) => connect to gitlab 
+    git remote -v => check if gitlab already connected
+    git pull origin master => take the file from gitlab to local branch master
+    git status => check branch and check status(stage or unstage)
+    touch (file name) => make a new file
+    git add (file name) => stage file
+    git add . => stage all the changed file or new file 
+    git commit -m "(message)" => commit file that already stage (-m = message)
+    git push origin master => upload the commited files to branch master
+    git clone => init and pull from repo gitlab
+    git restore --staged (file name) => unstage the file
+
+a) Apa itu git? 
+    Git is one of many version control tools to track the changes of source codes.
+    
+b) Apa fungsi dari command:
+    + git init = initiate git
+    + git remote add origin <link_name> = connect to git (gitlab/github)
+    + git add <file_name> = stage the files
+    + git push origin master = upload the commited files to branch master
