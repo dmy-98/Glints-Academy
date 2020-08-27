@@ -1,0 +1,17 @@
+Summary, Thursday, Augus 27,2020
+
+Git =
+    git checkout -b <branchName> = move to other branch or make a new branch
+    git push origin <branchName> = push to branch
+
+Basic HTML = Structure of Webpage
+    Body HTML Structure = Header, Menu, Article, Footer
+    
+CSS = Modify the webpage design (color, margin, padding, font, etc).
+    selector{
+        properties = value;
+    }
+    
+Assignment = 
+    + git checkout -b <branch_name> = Moving to other branch or make a new branch
+    + git pull origin <branch_name> = Pull codes from git branch in Gitlab/GitHub
