@@ -1,0 +1,36 @@
+body {
+    padding: 10px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+form {
+    margin: 20px;
+}
+
+label {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+input {
+    padding: 5px;
+}
+
+.btn {
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}

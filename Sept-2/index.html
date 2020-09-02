@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Report</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Financial Report of Mr. James</h1>
+    <form onsubmit="return submitHandler()">
+        <label for="title">Title</label><br>
+        <input type="text" name="title" id="title"><br>
+        <label for="type">Type</label><br>
+        <input type="text" name="type" id="type"><br>
+        <label for="type">Total</label><br>
+        <input type="text" name="total" id="total"><br>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <hr/>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Type</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="table-data">
+        </tbody>
+    </table>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
