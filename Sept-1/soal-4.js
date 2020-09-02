@@ -1,41 +1,21 @@
-// Split words without function .split(" ")
-var string = "Lorem ipsum is dummy text";
-
-// Using For
-
-const forSplitWords = (array) => {
-    let word = "";
-    let tempArray = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == " ") {
-            tempArray.push(word);
-            word = "";
+function checkXO(string) {
+    //code here
+    let x = 0;
+    let o = 0;
+    for (let i of string) {
+        if (i == "x") {
+            x++;
+        } else {
+            o++;
         }
-        word += array[i];
     }
-    return tempArray;
-};
-
-
-// Using While
-
-const whileSplitWords = (array) => {
-    let i = 0;
-    let word = "";
-    let tempArray = [];
-    while (i < array.length) {
-        if (array[i] == " ") {
-            tempArray.push(word);
-            word = "";
-        }
-        word += array[i];
-        i++;
+    if (x == o) {
+        return 1;
+    } else {
+        return -1;
     }
-    return tempArray;
-};
+}
 
-// Output
-// ["Lorem", "ipsum", "is", "dummy", "text"]
-
-// console.log(forSplitWords(string));
-console.log(whileSplitWords(string));
+//Test
+console.log(checkXO('xxxxxooooo')) //1
+console.log(checkXO('xxxooooo')) //-1

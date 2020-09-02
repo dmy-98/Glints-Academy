@@ -1,29 +1,14 @@
-//Print Segitiga
-const segitiga = (number) => {
-    for (let i = 1; i <= number; i++) {
-        let temp = "";
-        for (let j = 1; j <= i; j++) {
-            temp += "*";
-        }
-        console.log(temp);
+// Find the Mean of given Array
+
+function mean(array) {
+    //code here
+    let temp = 0;
+    for (let i of array) {
+        temp += i;
     }
-    console.log("")
+    return (temp / array.length).toFixed(2);
 }
 
-//Input 3
-//Output
-// *
-// **
-// ***
-
-segitiga(3);
-
-// 5
-//Output
-//  *
-//  **
-//  ***
-//  ****
-//  *****
-
-segitiga(5);
+//Test 
+console.log(mean([1, 2, 3, 4, 5])) //3
+console.log(mean([3.7, 5.3, 7.0, 1.9, 3.1, 0.5, 1.5])) //3.28 -> 2 angka di blkg
