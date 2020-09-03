@@ -1,10 +1,15 @@
 // Find the faktorial
 const factorial = (number) => {
     let total = 1;
+    let str = `${number}! = `;
     for (let i = number; i > 0; i--) {
+        str += i;
+        if (i != 1) {
+            str += ".";
+        }
         total *= i;
     }
-    return total;
+    return `${str} = ${total}`;
 };
 
 //Faktorial 
