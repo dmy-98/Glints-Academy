@@ -1,8 +1,9 @@
 // Find the Faktor Persekutuan terbesar
 function fpb(number1, number2) {
     var temp = 0;
-
-    for (var i = 1; i < number1; i++) {
+    let small = number1;
+    if (number1 > number2) { small = number2 }
+    for (var i = 1; i < small; i++) {
         if (number1 % i === 0 && number2 % i === 0) {
             temp = i;
         }
