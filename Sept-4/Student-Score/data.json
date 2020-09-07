@@ -1,0 +1,36 @@
+[{
+        "id": 1,
+        "name": "Erica Kumaha",
+        "major": "science",
+        "score": 99,
+        "status": true
+    },
+    {
+        "id": 2,
+        "name": "Jadi Yaqin",
+        "major": "science",
+        "score": 80,
+        "status": true
+    },
+    {
+        "id": 5,
+        "name": "Takada Leebur",
+        "major": "social",
+        "score": 100,
+        "status": true
+    },
+    {
+        "id": 7,
+        "name": "Lieurita Akiks",
+        "major": "science",
+        "score": 75,
+        "status": true
+    },
+    {
+        "id": 10,
+        "name": "Ann Jaye",
+        "major": "social",
+        "score": 81,
+        "status": true
+    }
+]
