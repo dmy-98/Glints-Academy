@@ -1,12 +1,12 @@
 // 1. Convert Minute to time
 
-function convertMinute(minute) {
+const convertMinute = (minute) => {
     let hour = parseInt(minute / 60);
     let remainMinute = minute % 60;
     if (remainMinute < 10) {
         remainMinute = `0${remainMinute}`;
     }
-    return `${parseInt(hour)}:${remainMinute}`;
+    return `${hour}:${remainMinute}`;
 }
 
 //Test Case

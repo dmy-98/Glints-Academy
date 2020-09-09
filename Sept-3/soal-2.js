@@ -1,10 +1,10 @@
 // 2. Sort the letters
 // Sort the letter from the word
 
-function sortLetter(words) {
-    words = words.split('');
-    words = words.sort();
-    return words.join('');
+const sortLetter = (words) => {
+    words = words.split(''); //string to array
+    words = words.sort(); // array sorting
+    return words.join(''); // array to string
 }
 
 //Test Case

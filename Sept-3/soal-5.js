@@ -1,7 +1,7 @@
 // 5. Count the vowel
-// Count the vowels and tunr into object
+// Count the vowels and turn into object
 
-function vowelsObject(apaja) {
+const vowelsObject = (apaja) => {
     let object = {
         a: 0,
         i: 0,

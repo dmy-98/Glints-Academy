@@ -1,9 +1,9 @@
 // 4. Split words without function .split(" ") and find the max
 
-var string = "Lorem ipsum is dummy text";
+let string = "Lorem ipsum is dummy text";
 
 // Using For
-function forMaxWordLength() {
+const forMaxWordLength = () => {
     let maxWord = "",
         nextWord = "";
     string += " "; // to count the last word
@@ -23,7 +23,7 @@ function forMaxWordLength() {
 
 
 // Using While
-function whileMaxWordLength() {
+const whileMaxWordLength = () => {
     let maxWord = "",
         nextWord = "",
         i = 0;
@@ -44,5 +44,5 @@ function whileMaxWordLength() {
 }
 
 // Test Case
-console.log(whileMaxWordLength(string)); //Lorem
+// console.log(whileMaxWordLength(string)); //Lorem
 console.log(forMaxWordLength(string)); //Lorem

@@ -51,7 +51,7 @@ Output a random color from a given color
 ```
 
 ## 5. Count the vowel
-Count the vowels and tunr into object
+Count the vowels and turn into object
 ```javascript
     function vowelsObject(apaja){
         
