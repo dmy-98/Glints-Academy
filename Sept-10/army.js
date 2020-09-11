@@ -43,5 +43,22 @@ class Army {
 };
 
 
+//Inheritances
+class Knight extends Army {
+    constructor(name, level) {
+        super(name, 'Knight', level);
+    }
+}
+class Spearman extends Army {
+    constructor(name, level) {
+        super(name, 'Spearman', level);
+    }
+}
+class Archer extends Army {
+    constructor(name, level) {
+        super(name, 'Archer', level);
+    }
+}
 
-module.exports = Army;
+
+module.exports = { Knight, Spearman, Archer };

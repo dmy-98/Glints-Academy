@@ -3,21 +3,7 @@ const Army = require('./army')
 const Barrack = require('./barrack');
 
 //Inheritances
-class Knight extends Army {
-    constructor(name, level) {
-        super(name, 'Knight', level);
-    }
-}
-class Spearman extends Army {
-    constructor(name, level) {
-        super(name, 'Spearman', level);
-    }
-}
-class Archer extends Army {
-    constructor(name, level) {
-        super(name, 'Archer', level);
-    }
-}
+const { Knight, Spearman, Archer } = Army;
 
 //Make Instances of Army
 const knightSatu = new Knight("Knight Satu", 3);
