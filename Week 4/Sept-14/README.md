@@ -6,10 +6,10 @@
 - Students can implement the relation between object & class
 - Students can analyze the task
 
-## To DO List
+## To Do List
 
 Simple application that can save and track our todo lizt.
-The application has CRD, find the id, and complete.
+The application has CRUD, find the id, and complete.
 
 ### Task Objectives
 
@@ -21,11 +21,11 @@ The application has CRD, find the id, and complete.
 node todo.js
 node todo.js help //menampilkan commandd apa saja yang tersedia
 node todo.js list //Melihat daftar TODO
-node todo.js add <content> //Menambahkan TODO ke dalam list
-node todo.js update <id> <task>//Melihat detail TODO sesuai `id` nya
-node todo.js delete <id> //Menghapus TODO sesuai `id` nya
-node todo.js complete <id> //Menandai status TODO selesai
-node todo.js uncomplete <id> //Menandai status TODO belum selesai
+node todo.js add (content) //Menambahkan TODO ke dalam list
+node todo.js update (id)(task) // Melihat detail TODO sesuai `id` nya
+node todo.js delete (id) //Menghapus TODO sesuai `id` nya
+node todo.js complete (id) //Menandai status TODO selesai
+node todo.js uncomplete (id) //Menandai status TODO belum selesai
 ```
 
 `id` di sini berfungsi sebagai ID unik untuk membedakan tiap TODO.
@@ -71,7 +71,7 @@ ___
   node todo.js help
   ```
 
-  OUtput :
+  Output :
 
   ```javascript
   node todo.js
@@ -92,7 +92,7 @@ ___
   node todo.js list
   ```
 
-  OUtput :
+  Output :
 
   ```javascript
     //Show the id and the tas
@@ -109,11 +109,26 @@ ___
   node todo.js add "Ngoding Bareng"
   ```
 
-  OUtput :
+  OUuput :
 
   ```javascript
   //Feedback must same
-  "Ngoding Bareng" has been create!
+  "Ngoding Bareng" has been created!
+  ```
+
+- Implement the **update** command . For example :
+
+  Input :
+
+  ```javascript
+  node todo.js update 3 "Makan Bersama"
+  ```
+
+  Output :
+
+  ```javascript
+  //Feedback must same
+  "Ngoding Bareng" has been changed to "Makan Bersama"!
   ```
 
 - Implement the **delete** command . For example :
@@ -124,27 +139,14 @@ ___
   node todo.js delete 3
   ```
 
-  OUtput :
+  Output :
 
   ```javascript
   //Feedback must same
-  "Ngoding Bareng" has been remove!
+  "Ngoding Bareng" has been removed!
   ```
   
-- Implement the **update** command . For example :
 
-  Input :
-
-  ```javascript
-  node todo.js update 3 "Makan Bersama"
-  ```
-
-  OUtput :
-
-  ```javascript
-  //Feedback must same
-  "Ngoding Bareng" has been changed to "Makan Bersama"!
-  ```
   
 ### Change status - Task 2 (50%)
 
@@ -155,7 +157,7 @@ ___
   node todo.js complete 3
   ```
 
-  OUtput :
+  Output :
 
   ```javascript
   //Feedback must same
@@ -170,7 +172,7 @@ ___
   node todo.js uncomplete 3
   ```
 
-  OUtput :
+  Output :
 
   ```javascript
   //Feedback must same

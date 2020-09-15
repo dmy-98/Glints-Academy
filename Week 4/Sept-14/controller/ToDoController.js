@@ -1,7 +1,7 @@
 const ToDo = require('../model/ToDo');
 const View = require('../view/View');
 
-class ToDOController {
+class ToDoController {
     static help() {
         View.help();
     }
@@ -13,12 +13,20 @@ class ToDOController {
         const result = ToDo.add(params);
         View.message(result);
     }
+    static update(params) {
+        const result = ToDo.update(params);
+        View.message(result);
+    }
     static delete(params) {
         const result = ToDo.delete(params);
         View.message(result);
     }
-    static update(params) {
-        const result = ToDo.update(params);
+    static complete(params) {
+        const result = ToDo.complete(params);
+        View.message(result);
+    }
+    static uncomplete(params) {
+        const result = ToDo.uncomplete(params);
         View.message(result);
     }
     static message() {
@@ -26,4 +34,4 @@ class ToDOController {
     }
 }
 
-module.exports = ProductController;
+module.exports = ToDoController;

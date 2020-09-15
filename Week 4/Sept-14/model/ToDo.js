@@ -1,74 +1,113 @@
 const fs = require('fs');
 
 class ToDo {
-    constructor(id, task, tag, status, createdAt) {
+    constructor(id, task, status, tag, created_at, completed_at) {
         this.id = id;
         this.task = task;
         this.status = status;
         this.tag = tag;
-        this.createdAt = createdAt;
-        this.completedAt = completedAt;
+        this.created_at = created_at;
+        this.completed_at = completed_at;
     }
 
     static list() {
         const data = fs.readFileSync('./data.json', 'utf8');
         const parseData = JSON.parse(data);
 
-        let tempData = [];
-        parseData.forEach(data => {
-            const { id, name, status, tag, createdAt, completedAt } = data;
-            tempData.push(new Product(id, name, status, tag, new Date(createdAt), completedAt));
-        });
-        return tempData;
+        // let tempData = [];
+        // parseData.forEach(data => {
+        //     const { id, task, status, tag, created_at, completed_at } = data;
+        //     tempData.push(new ToDo(id, task, status, tag, new Date(created_at), new Date(completed_at)));
+        // });
+
+        // console.log(parseData);
+
+        return parseData;
     }
     static add(params) {
-        // console.log("List");
-        const tasks = this.list();
-        // const name = params[0];
-        // const category = params[1];
-        // const status = params[2];
+        const datas = this.list();
+        const task = params[0];
 
-        //Destructuring Array
-        const [name, category, status] = params;
-
-        const nextId = tasks[tasks.length - 1].id + 1;
+        const nextId = datas[datas.length - 1].id + 1;
         const tempObject = {
             id: nextId,
-            name: name,
-            status: (status === 'true'),
+            task: task,
+            status: false,
             tag: [],
             createdAt: new Date(),
             completedAt: null
         }
-        tasks.push(tempObject);
+        datas.push(tempObject);
 
-        this.save(tasks);
-        return `Product ${name} has been added.`
+        this.save(datas);
+        return `Task '${task}' has been created!`
     }
-    static delete(params) {
-        // console.log("List");
-        const tasks = this.list();
-        const id = Number(params[0]);
 
-        const tempData = tasks.filter((product) => product.id !== id);
-
-        this.save(tempData);
-        return `Id ${id} has been deleted`;
-    }
     static update(params) {
-        // console.log("List");
-        const tasks = this.list();
+        const datas = this.list();
         const id = Number(params[0]);
-        const name = params[1];
+        const task = params[1];
+        let taskBefore;
 
-        tasks.forEach(product => {
-            if (product.id === id) {
-                product.name = name;
+        datas.forEach(data => {
+            if (data.id === id) {
+                taskBefore = data.task;
+                data.task = task;
             }
         });
-        this.save(tasks);
-        return `Id ${id} has been updated`
+        this.save(datas);
+        return `'${taskBefore}' has been changed to '${task}'!`
     }
+
+    static delete(params) {
+        const datas = this.list();
+        const id = Number(params[0]);
+        let task;
+
+        datas.forEach(data => {
+            if (data.id === id) {
+                task = data.task;
+            }
+        });
+
+        const tempData = datas.filter((data) => data.id !== id);
+
+        this.save(tempData);
+        return `'${task}' has been removed!`;
+    }
+
+    static complete(params) {
+        const datas = this.list();
+        const id = Number(params[0]);
+        let task;
+
+        datas.forEach(data => {
+            if (data.id === id) {
+                task = data.task;
+                data.status = true;
+            }
+        });
+
+        this.save(datas);
+        return `'${task}' has been completed!`
+    }
+
+    static uncomplete(params) {
+        const datas = this.list();
+        const id = Number(params[0]);
+        let task;
+
+        datas.forEach(data => {
+            if (data.id === id) {
+                task = data.task;
+                data.status = false;
+            }
+        });
+
+        this.save(datas);
+        return `'${task}' has been uncompleted!`
+    }
+
     static save(data) {
         fs.writeFileSync('./data.json', JSON.stringify(data, null, 2));
     }
