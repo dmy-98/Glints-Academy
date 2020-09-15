@@ -34,8 +34,8 @@ class ToDo {
             task: task,
             status: false,
             tag: [],
-            createdAt: new Date(),
-            completedAt: null
+            created_at: new Date(),
+            completed_at: null
         }
         datas.push(tempObject);
 
@@ -85,6 +85,7 @@ class ToDo {
             if (data.id === id) {
                 task = data.task;
                 data.status = true;
+                data.completed_at = new Date();
             }
         });
 
@@ -101,6 +102,7 @@ class ToDo {
             if (data.id === id) {
                 task = data.task;
                 data.status = false;
+                data.completed_at = null;
             }
         });
 
