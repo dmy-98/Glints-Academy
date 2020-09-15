@@ -1,0 +1,11 @@
+{
+    "name": "sept-14",
+    "version": "1.0.0",
+    "description": "- Students can unserstand MVC Design Pattern\r - Students can implement the relation between object & class\r - Students can analyze the task",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Daniel Mahardika",
+    "license": "ISC"
+}
