@@ -1,0 +1,14 @@
+{
+  "name": "sept-16",
+  "version": "1.0.0",
+  "description": "Get use to PostgreSQL by migrating from Json to postgre\r Make sure you already make the database from the pg-admin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.3.3"
+  }
+}
