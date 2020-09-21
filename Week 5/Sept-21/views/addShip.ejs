@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Ship</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        
+        table {
+            width: 500px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+        
+        thead {
+            background: lightblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Pirate X Marine</h1>
+    <a href="/">Home</a>
+    <a href="/ships">Ships</a>
+    <a href="/pirates">Pirates</a>
+
+    <h2>Add Ship</h2>
+    <form action="/ships/add" method="post">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <select name="type" id="type">
+            <option value="Caravel">Caravel</option>
+            <option value="Galleon">Galleon</option>
+        </select>
+        <input type="text" name="power" id="power" placeholder="Power">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

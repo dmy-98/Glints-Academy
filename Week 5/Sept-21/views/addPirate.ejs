@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pirate</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        
+        table {
+            width: 500px;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+        
+        thead {
+            background: lightblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Pirate X Marine</h1>
+    <a href="/">Home</a>
+    <a href="/ships">Ships</a>
+    <a href="/pirates">Pirates</a>
+
+    <h2>Add Pirate</h2>
+    <form action="/pirates/add" method="post">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <select name="status" id="status">
+            <option value="Captain">Captain</option>
+            <option value="Nakama">Nakama</option>
+        </select>
+        <select name="haki" id="haki">
+            <option value="Awakening">Awakening</option>
+            <option value="Standard">Standard</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

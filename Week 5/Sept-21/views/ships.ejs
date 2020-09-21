@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ships List</title>
+    <style>
+        body {
+            font-family: "Avenir", sans-serif;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+        
+        thead {
+            background: lightblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Pirate X Marine</h1>
+    <a href="/">Home</a>
+    <a href="/ships">Ships</a>
+    <a href="/ships/add">Add Ship</a>
+    <a href="/pirates">Pirates</a>
+
+    <h2>Ships List</h2>
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Power</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% ships.forEach(ship => { %>
+                <tr>
+                    <td>
+                        <%= ship.name %>
+                    </td>
+                    <td>
+                        <%= ship.type %>
+                    </td>
+                    <td>
+                        <%= ship.power %>
+                    </td>
+                    <td>
+                        <a href="ships/delete/ <%= ship.id %>">Delete</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>
